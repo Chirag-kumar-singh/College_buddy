@@ -2,7 +2,7 @@
 
 
 
-Welcome to College buddy, College Buddy is and android app dedicated to student , by which they can help each other in different ways.
+Welcome to College buddy, College Buddy is an android app dedicated to student , by which they can help each other in different ways.
 
 ## Features
 
