@@ -1,0 +1,156 @@
+<!-- res/layout/activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- TextInputLayout for Name -->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile_user_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/profile_user_foreground"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="@dimen/nav_image_circular_border_width" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTextInputLayout"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:layout_marginStart="38dp"
+        app:boxStrokeColor="@color/secondarycolor">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textColor="@color/black"
+            android:background="@drawable/edittextbg"
+            android:paddingTop="5dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTextInputLayout"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTextInputLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="38dp"
+        app:boxStrokeColor="@color/secondarycolor">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColor="@color/black"
+            android:textColorHint="#7A8089"
+            android:background="@drawable/edittextbg"
+            android:paddingTop="5dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for Batch -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/batchTextInputLayout"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailTextInputLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="38dp"
+        app:boxStrokeColor="@color/secondarycolor">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_batch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Batch"
+            android:textColor="@color/black"
+            android:background="@drawable/edittextbg"
+            android:paddingTop="5dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for Branch -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/branchTextInputLayout"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/batchTextInputLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="38dp"
+        app:boxStrokeColor="@color/secondarycolor">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_branch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Branch"
+            android:textColor="@color/black"
+            android:background="@drawable/edittextbg"
+            android:paddingTop="5dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for Roll Number -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rollNumberTextInputLayout"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/branchTextInputLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="38dp"
+        app:boxStrokeColor="@color/secondarycolor">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_rollnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Roll number"
+            android:textColor="@color/black"
+            android:background="@drawable/edittextbg"
+            android:paddingTop="5dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rollNumberTextInputLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/shape_button_rounded"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="Update" />
+
+    <ImageView
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/back__1__1"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:onClick="onBackButtonClick"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:layout_marginStart="38dp"
+        android:text="Personal Details"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

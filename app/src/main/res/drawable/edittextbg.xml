@@ -1,0 +1,14 @@
+<!-- res/drawable/edittextbg.xml -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:bottom="-30dp"> <!-- Adjust this value as needed -->
+        <shape android:shape="line">
+            <stroke android:width="3dp" android:color="@color/secondarycolor" /> <!-- Change this to your desired color -->
+        </shape>
+    </item>
+</layer-list>

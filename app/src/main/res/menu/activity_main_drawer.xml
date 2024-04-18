@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@mipmap/dashboard"
+            android:title="My Profile"
+            />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@mipmap/about_us_foreground"
+            android:title="About Us"
+            />
+
+    </group>
+</menu>

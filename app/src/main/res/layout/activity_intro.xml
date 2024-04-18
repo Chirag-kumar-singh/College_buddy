@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.IntroActivity"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Welcome to\nCollege Buddy"
+        android:textAlignment="center"
+        android:textColor="#FF735C"
+        android:textSize="35sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/logintextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/rounded_corner_view"
+        android:paddingLeft="25sp"
+        android:paddingTop="5sp"
+        android:paddingRight="25sp"
+        android:paddingBottom="8sp"
+        android:text="Login"
+        android:textColor="#FF735C"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/signuptextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_corner_view"
+        android:paddingLeft="17sp"
+        android:paddingTop="5sp"
+        android:paddingRight="17sp"
+        android:paddingBottom="8sp"
+        android:text="Sign up"
+        android:textColor="#FF735C"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/_605885" />
+</LinearLayout>

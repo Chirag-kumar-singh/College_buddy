@@ -1,0 +1,11 @@
+<!-- res/drawable/fading_circle.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:startColor="#FCEB9183"
+        android:endColor="@color/white"
+        android:type="radial"
+        android:centerX="80%"
+        android:centerY="-20%"
+        android:gradientRadius="200%p"/>
+</shape>

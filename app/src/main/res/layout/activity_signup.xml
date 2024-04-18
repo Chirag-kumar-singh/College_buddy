@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.IntroActivity"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_sign_up_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Welcome to\nCollege Buddy"
+        android:textAlignment="center"
+        android:textColor="#FF735C"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        />
+
+    <EditText
+        android:id="@+id/nameedittext"
+        android:layout_width="210dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corner_view_edit_text"
+        android:hint="Full Name"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingLeft="10sp"/>
+
+
+    <EditText
+        android:id="@+id/emailedittext2"
+        android:layout_width="210dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_corner_view_edit_text"
+        android:hint="Email Address"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingLeft="10sp"/>
+
+    <EditText
+        android:id="@+id/passwordedittext2"
+        android:layout_width="210dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_corner_view_edit_text"
+        android:hint="Password"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingLeft="10sp"/>
+
+    <EditText
+        android:id="@+id/passwordedittext3"
+        android:layout_width="210dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_corner_view_edit_text"
+        android:hint="Re enter Password"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingLeft="10sp"/>
+
+
+
+    <TextView
+        android:id="@+id/Signuptextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corner_view"
+        android:paddingLeft="25sp"
+        android:paddingTop="5sp"
+        android:paddingRight="25sp"
+        android:paddingBottom="8sp"
+        android:text="Sign up"
+        android:textColor="#FF735C"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/_30_generated"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+
+</LinearLayout>
