@@ -74,6 +74,20 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             val intent2 = Intent(this, ExamPapersActivity::class.java)
             startActivity(intent2)
         }
+
+        var NotesCard = findViewById<CardView>(R.id.NotesCard)
+        NotesCard.setOnClickListener {
+            val intent = Intent(this, Upload_notes_paper::class.java)
+            intent.putExtra(Constants.NAME, mUserName)
+            val intent2 = Intent(this, NotesPapersActivity::class.java)
+            startActivity(intent2)
+        }
+
+        var LinksCard = findViewById<CardView>(R.id.LinksCard)
+        LinksCard.setOnClickListener {
+            val intent = Intent(this, Link_view::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onUserDataLoaded(user: User) {

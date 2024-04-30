@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.Upload_exam_paper">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp"
+            android:background="@drawable/upload_border">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/selectpdftextview"
+                android:text="Select Pdf"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_corner_view"
+                android:textColor="@color/primarycolor"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/upload"
+                android:id="@+id/uploadPdfImage"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/pdfname"
+                android:background="@drawable/upload_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter pdf name"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:id="@+id/branchofpaperSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/upload_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/primarycolor" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/yearofpaper"
+                android:background="@drawable/upload_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Year"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/subjectofpaper"
+                android:background="@drawable/upload_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Subject"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Upload"
+                android:id="@+id/uploadexampdfButton"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                app:cornerRadius = "20dp"
+                android:background="@drawable/upload_border"
+                android:backgroundTint="@color/primarycolor"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>

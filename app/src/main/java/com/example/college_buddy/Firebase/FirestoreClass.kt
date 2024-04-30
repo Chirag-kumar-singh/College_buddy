@@ -9,9 +9,12 @@ import com.example.college_buddy.Activities.Exam_Paper_view
 import com.example.college_buddy.Activities.LoginActivity
 import com.example.college_buddy.Activities.MainActivity
 import com.example.college_buddy.Activities.MyProfileActivity
+import com.example.college_buddy.Activities.Notes_Paper_view
 import com.example.college_buddy.Activities.SignupActivity
 import com.example.college_buddy.Activities.Upload_exam_paper
+import com.example.college_buddy.Activities.Upload_notes_paper
 import com.example.college_buddy.models.Exam_paper
+import com.example.college_buddy.models.Notes_paper
 import com.example.college_buddy.models.User
 import com.example.college_buddy.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
@@ -147,6 +150,28 @@ class FirestoreClass {
             }
     }
 
+    fun uploadnotespaper(activity: Upload_notes_paper, examPaper: Exam_paper){
+        mFireStore.collection(Constants.NOTES_PAPER)
+            .document()
+            .set(examPaper, SetOptions.merge())
+            .addOnSuccessListener {
+                Log.e(activity.javaClass.simpleName, "Notes uploaded successfully.")
+
+                Toast.makeText(activity,
+                    "Notes uploaded successfully", Toast.LENGTH_SHORT).show()
+                activity.ExamPaperUploadedSuccessfully()
+            }
+            .addOnFailureListener {
+                    exception ->
+                activity.hideProgressDialog()
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Error while uploading pdf",
+                    exception
+                )
+            }
+    }
+
     fun getExamPapersList(activity: Exam_Paper_view, branch: String){
         mFireStore.collection(Constants.EXAM_PAPER)
             .whereEqualTo("branch", branch)
@@ -162,6 +187,28 @@ class FirestoreClass {
                 }
 
                 activity.populateExamPapersListToUI(ExamPapersList)
+            }
+            .addOnFailureListener {e->
+                activity.hideProgressDialog()
+                Log.e(activity.javaClass.simpleName, "Error while displaying papers.", e)
+            }
+    }
+
+    fun getNotesPapersList(activity: Notes_Paper_view, branch: String){
+        mFireStore.collection(Constants.NOTES_PAPER)
+            .whereEqualTo("branch", branch)
+            .get()
+            .addOnSuccessListener {
+                    document ->
+                Log.i(activity.javaClass.simpleName, document.documents.toString())
+                val NotesPapersList: ArrayList<Notes_paper> = ArrayList()
+                for (i in document.documents){
+                    val notes_paper = i.toObject(Notes_paper::class.java)!!
+                    notes_paper.documentId = i.id
+                    NotesPapersList.add(notes_paper)
+                }
+
+                activity.populateNotesPapersListToUI(NotesPapersList)
             }
             .addOnFailureListener {e->
                 activity.hideProgressDialog()

@@ -15,6 +15,8 @@ object Constants{
 
     const val EXAM_PAPER: String = "exam_paper"
 
+    const val NOTES_PAPER: String = "notes_paper"
+
     //A unique code for asking the Read Storage Permission using this we will be check and identify in the method onRequestPermissionsResult
     const val READ_STORAGE_PERMISSION_CODE = 1
     // A unique code of image selection from Phone Storage.

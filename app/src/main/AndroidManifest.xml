@@ -17,6 +17,20 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.Link_view"
+            android:exported="false"
+            android:theme="@style/AppTheme2"
+            />
+        <activity
+            android:name=".Activities.Notes_Paper_view"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.NotesPapersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Upload_notes_paper"
+            android:exported="false" />
+        <activity
             android:name=".Activities.PdfViewActivity"
             android:exported="false" />
         <activity
