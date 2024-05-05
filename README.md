@@ -22,24 +22,37 @@ Welcome to College buddy, College Buddy is an android app dedicated to student o
 
 ## Screenshots
 
-### Login and Signup View.
+### 1. Login and Signup View.
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/656f3cdc-4bb6-4d18-8193-8e126c7cb082" width="30%"></img> 
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/d074aa58-418f-4bdb-8194-e9ec49f44547" width="30%"></img> 
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/2e301273-eb04-49e7-8355-8a46b870b717" width="30%"></img> 
+<img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/83aa0dfa-f985-4aca-a48c-e2a2ad3f69bc" width="30%"></img> 
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/cfaa256d-1ed4-4fbc-a71c-773de5a048f2" width="30%"></img> 
+<img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/4f6031be-9004-495f-8658-3d87f30cb6d8" width="30%"></img> 
 
-### Main page.
-<img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/498857fe-32af-4fe4-8b4a-8a20d53c8731" width="30%"></img> 
+### 2. Main page.
+<img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/95f2b1c8-f02c-4efd-b2e1-ba91caa5da45" width="30%"></img> 
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/77f50ac8-2c00-46c7-a3f4-f001ad425468" width="30%"></img> 
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/9af42324-d569-4297-8bdc-a754b12e6513" width="30%"></img> 
 
-### Exam Paper Upload and View.
+### 3. Exam Paper Upload and View.
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/9652b23a-5b17-4588-8ce7-a08cdee633a4" width="30%"></img> 
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/a1e766ae-3da9-4c6d-a435-430f2fff5cc3" width="30%"></img> 
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/9859b1cb-8f3e-4978-bfc2-05e58a5be4f8" width="30%"></img> 
 <img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/c61983b8-8485-4198-bbe1-9dd304f8cdfb" width="30%"></img> 
 
-## Libraries used :
+### 4. Notes Upload and View.
+same as Exam paper upload and view.
+
+### 5. Links.
+<img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/2c20473f-a505-413e-982e-f60b10911494" width="30%"></img> 
+<img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/0cb6a231-b2ff-4bc0-b718-a05cfb36f041" width="30%"></img> 
+
+### 6. Confessions and Secrets.
+<img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/1224df48-25c9-42aa-a3d7-53f43a2f22bc" width="30%"></img> 
+<img src="https://github.com/Chirag-kumar-singh/College_buddy/assets/127758120/7839e8df-010d-45d9-8ea2-dceb69004a1f" width="30%"></img> 
+
+## 6. Libraries used :
 
  - [Firebase Database](https://github.com/firebase/firebase-android-sdk)
  - [Firebase Authentication](https://github.com/firebase/firebase-android-sdk)
