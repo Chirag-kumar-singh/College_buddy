@@ -25,4 +25,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- res/values-night/styles.xml -->
+    <style name="AppTheme3" parent="Theme.AppCompat.NoActionBar">
+        <!-- Your dark mode styles -->
+        <item name="android:windowBackground">@color/black</item>
+        <!-- Add other dark mode attributes as needed -->
+    </style>
+
+
 </resources>

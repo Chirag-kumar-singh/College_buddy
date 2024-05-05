@@ -11,11 +11,14 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.college_buddy.Firebase.FirestoreClass
 import com.example.college_buddy.R
 import com.example.college_buddy.models.User
 import com.example.college_buddy.utils.Constants
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import de.hdodenhof.circleimageview.CircleImageView
@@ -33,7 +36,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         mUserName = "Default User"
 
         window.setFlags(
@@ -88,7 +90,33 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             val intent = Intent(this, Link_view::class.java)
             startActivity(intent)
         }
+
+//        val navHostFragment =
+//            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
+//        navController = navHostFragment.navController
+
+        // Set up bottom navigation
+        var bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigation.selectedItemId = R.id.homeImage
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.secretsFeed -> {
+                    val intent = Intent(this, Secrets_feeds::class.java)
+                    intent.putExtra(Constants.NAME, mUserName)
+                    startActivity(intent)
+                    true
+                }
+                // Add other cases for additional menu items here
+                else -> false
+            }
+        }
     }
+
+//    private fun navigateToFragment(fragment: Fragment) {
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.nav_host_fragment_activity_main, fragment)
+//            .commit()
+//    }
 
     override fun onUserDataLoaded(user: User) {
         // Update mUserName property

@@ -17,10 +17,17 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.Secrets_write"
+            android:exported="false"
+            android:theme="@style/AppTheme3"/>
+        <activity
+            android:name=".Activities.Secrets_feeds"
+            android:theme="@style/AppTheme3"
+            android:exported="false" />
+        <activity
             android:name=".Activities.Link_view"
             android:exported="false"
-            android:theme="@style/AppTheme2"
-            />
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".Activities.Notes_Paper_view"
             android:exported="false" />

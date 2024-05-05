@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.college_buddy"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -39,6 +39,8 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        viewBinding = true
+        dataBinding = true
         compose = true
     }
     composeOptions {
@@ -58,6 +60,7 @@ android {
 //}
 
 dependencies {
+    val nav_version = "2.7.7"
 
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
@@ -94,4 +97,7 @@ dependencies {
 
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+//    implementation ("androidx.navigation:navigation-fragment-ktx:$nav_version")
+//    implementation ("androidx.navigation:navigation-ui-ktx:$nav_version")
 }

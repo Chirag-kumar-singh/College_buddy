@@ -10,15 +10,19 @@ import com.example.college_buddy.Activities.LoginActivity
 import com.example.college_buddy.Activities.MainActivity
 import com.example.college_buddy.Activities.MyProfileActivity
 import com.example.college_buddy.Activities.Notes_Paper_view
+import com.example.college_buddy.Activities.Secrets_feeds
+import com.example.college_buddy.Activities.Secrets_write
 import com.example.college_buddy.Activities.SignupActivity
 import com.example.college_buddy.Activities.Upload_exam_paper
 import com.example.college_buddy.Activities.Upload_notes_paper
+import com.example.college_buddy.models.Confessions
 import com.example.college_buddy.models.Exam_paper
 import com.example.college_buddy.models.Notes_paper
 import com.example.college_buddy.models.User
 import com.example.college_buddy.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.SetOptions
 
 
@@ -215,6 +219,49 @@ class FirestoreClass {
                 Log.e(activity.javaClass.simpleName, "Error while displaying papers.", e)
             }
     }
+
+    fun getConfessionsList(activity: Secrets_feeds) {
+        mFireStore.collection(Constants.CONFESSIONS)
+            .orderBy("timestamp", Query.Direction.ASCENDING)
+            .get()
+            .addOnSuccessListener { documents ->
+                val confessionsList = mutableListOf<Confessions>()
+
+                for (document in documents) {
+                    val messager = document.getString("messager") ?: ""
+                    val message = document.getString("message") ?: ""
+                    val timestamp = document.getLong("timestamp") ?: 0L
+                    val confession = Confessions(messager, message, timestamp)
+                    confessionsList.add(confession)
+                }
+
+                // Pass the confessionsList to your activity to populate the UI
+                activity.hideProgressDialog()
+                activity.populateConfessionsListToUI(confessionsList)
+            }
+            .addOnFailureListener { exception ->
+                activity.hideProgressDialog()
+                Log.e(activity.javaClass.simpleName, "Error getting confessions", exception)
+                // Handle failure, such as displaying an error message to the user
+            }
+    }
+
+
+    fun uploadConfession(activity: Secrets_write, confession: Confessions) {
+        mFireStore.collection(Constants.CONFESSIONS)
+            .add(confession)
+            .addOnSuccessListener {
+                Log.e(activity.javaClass.simpleName, "Confession uploaded successfully.")
+                Toast.makeText(activity, "Confession uploaded successfully", Toast.LENGTH_SHORT).show()
+                // You can perform any additional actions here after successful upload, such as showing a success message or navigating to another screen.
+            }
+            .addOnFailureListener { exception ->
+                Log.e(activity.javaClass.simpleName, "Error while uploading confession", exception)
+                Toast.makeText(activity, "Error while uploading confession", Toast.LENGTH_SHORT).show()
+                // Handle the failure scenario here, such as showing an error message to the user.
+            }
+    }
+
 
     fun getCurrentUserID(): String{
         var currentUser = FirebaseAuth.getInstance().currentUser
