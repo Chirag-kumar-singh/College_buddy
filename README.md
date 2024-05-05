@@ -2,16 +2,18 @@
 
 
 
-Welcome to College buddy, College Buddy is an android app dedicated to student , by which they can help each other in different ways.
+Welcome to College buddy, College Buddy is an android app dedicated to student of IIITDM kurnool , by which they can help each other in different ways.
 (Still in development).
 
 ## Features
 
 - 👨‍🏫 Previous Year Papers Database : Now, you can search amongst each other to get the previous year of any paper. 
 
-- 🔔 Link Section : No need to open college sites! Get all the college related links like moodle, aims etc on your fingertips. (Still in development).
+- 🔔 Link Section : No need to open college sites! Get all the college related links like moodle, aims etc on your fingertips.
 
-- 📖 College-notes : Stuck in finding pdf? No worries, we've got you covered. Access all the learning material of others.(still in developement)
+- 📖 College-notes : Stuck in finding pdf? No worries, we've got you covered. Access all the learning material of others.
+
+- 🤫 Confession : Share your deepest thoughts, confessions, secrets with your college mates.
 
 - ➗ CGPA Calculator : Got your marks, but where do you stand? Know your GPA / CGPA by entering your marks and course credits (still in development)
 
